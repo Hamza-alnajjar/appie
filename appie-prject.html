@@ -1,0 +1,2613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>appie-project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-family: "Roboto", sans-serif;
+        font-size: 10px;
+      }
+
+      .nav {
+        display: flex;
+        margin-top: 2rem;
+        margin-left: 5rem;
+        text-decoration: none;
+        color: #343a40;
+        justify-self: flex-start;
+        font-size: 1.6rem;
+        font-weight: 400;
+      }
+
+      .nav-c {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-items: end;
+      }
+
+      header {
+        background-color: #eef1f6;
+      }
+
+      .appie {
+        margin-top: 1.1rem;
+        margin-right: 5rem;
+        margin-left: 10rem;
+      }
+
+      .chevron {
+        height: 2.4rem;
+        width: 2.4rem;
+        stroke: #343a40;
+        cursor: pointer;
+      }
+
+      .header-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr;
+        margin-top: 15rem;
+      }
+
+      h1 {
+        font-size: 9.5rem;
+        font-weight: 100;
+        font-family: "Roboto", sans-serif;
+        color: #0D1133;
+        display: grid;
+         align-items: center;
+         text-align: start;
+        justify-content: center;
+        margin-top: 2rem;
+        margin-left: 15rem;
+      }
+
+      h2 {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 10;
+        color: #0D1133;
+        display: grid;
+        margin-top: 2rem;
+        margin-left: 15rem;
+        margin-bottom: 4rem;
+      }
+
+      .img-1 {
+        background-color: #eef1f6;
+        grid-column: 2;
+        grid-row-start: 1;
+        grid-row-end: 5;
+      }
+
+      .hbtn:link,
+      .hbtn:visited {
+        background-color: #e64980;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.8rem;
+        height: 5rem;
+        width: 15.6rem;
+        padding: 1.6rem 3.2rem;
+        display: grid;
+        font-weight: 500;
+        border-radius: 5rem;
+        align-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        margin-right: 15rem;
+      }
+
+      .hbtn:hover,
+      .hbtn:active {
+        background-color: #f06595;
+      }
+
+      .home,
+      .service,
+      .pages,
+      .news,
+      .contact {
+        margin-left: 2rem;
+      }
+
+      .email {
+        display: flex;
+        height: 5rem;
+        width: 40rem;
+        background-color: #fff;
+        box-shadow: 0rem 2rem 2rem 1rem rgba(0, 0, 0, 0.13),
+          -0.4rem 0rem 0rem 0rem #e64980;
+        border-radius: 3rem;
+        margin-left: 15rem;
+        margin-bottom: 4rem;
+        align-items: center;
+      }
+      .email-icon {
+        float: left;
+        height: 2rem;
+        width: 2rem;
+        margin-left: 2.5rem;
+        color: #adb5bd;
+      }
+
+      .info-form {
+        margin-right: auto;
+        border: none;
+      }
+
+      .info-form input {
+        border: none;
+        outline: none;
+      }
+
+      .input-email {
+        border: none;
+        margin-left: 1.5rem;
+        font-size: 1.5rem;
+      }
+
+      .email-enter-icon {
+        height: 2.4rem;
+        width: 2.4rem;
+        color: #e64980;
+        text-decoration: none;
+        margin-top: 0.4rem;
+        margin-right: 1.5rem;
+      }
+
+      .all-c {
+        display: flex;
+        float: left;
+        margin-left: 15rem;
+        margin-bottom: 15.5rem;
+
+      }
+
+      .c-1 {
+        display: flex;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        border:  0.3rem solid #fff;
+        box-shadow: 0rem 1rem 2rem 0.5rem rgba(0, 0, 0, 0.3);
+        position:relative;
+        z-index:4;
+      }
+      .c-2 {
+        display: flex;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        border:  0.3rem solid #fff;
+        box-shadow: 0rem 1rem 2rem 0.5rem rgba(0, 0, 0, 0.3);
+        position:relative;
+        margin-left: -2.3rem;
+        z-index:3;
+      }
+
+      .c-4 {
+        display: flex;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        border:  0.3rem solid #fff;
+        box-shadow: 0rem 1rem 2rem 0.5rem rgba(0, 0, 0, 0.3);
+        position:relative;
+        margin-left: -2.3rem;
+        z-index:2;
+      }
+
+      .c-5 {
+        display: flex;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        border:  0.3rem solid #fff;
+        box-shadow: 0rem 1rem 2rem 0.5rem rgba(0, 0, 0, 0.3);
+        position: relative;
+        margin-left:-2.3rem ;
+        z-index:1;
+      }
+
+      .c-p {
+        margin-left: 3rem;
+      }
+
+      .t-k {
+        font-size: 3.2rem;
+        font-weight: bold;
+        color: #0D1133;
+      }
+      .feedback {
+        font-size: 1.6rem;
+        color: #495057;
+      }
+
+      .big-div {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+
+      .how-div {
+        font-weight: bold;
+      }
+
+      .how-div {
+      font-size: 3.2rem;
+      color: #0D1133;
+      margin-top: 8rem;
+      margin-left: 15rem;
+      }
+
+      .b-1p {
+        margin-top: 1rem;
+        margin-left: 15rem;
+        margin-bottom: 7.5rem;
+        color: #343a40;
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+
+      .v-btn:link,
+      .v-btn:visited {
+        display: flex;
+        align-self: flex-end;
+        align-items: center;
+        height: 2rem;
+        width: 5rem;
+        border-radius: 5rem;
+        margin-top: 12rem;
+        margin-right: 15rem; 
+      }
+      
+      .v-btn:hover,
+      .v-btn:active {
+        background-color: #dee2e6;
+      }
+      
+      .v-btn {
+        display: flex;
+        border: 0.2rem solid #dee2e6;
+        border-radius: 5rem;
+        align-items: center;
+        cursor: pointer;
+        background-color: #fff;
+        margin-right: 15rem;
+        margin-bottom: 7.5rem;
+      }
+      .v-btn-p {
+        display: flex;
+        font-weight:600;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 2rem;
+        color: #212529;
+      }
+
+      .v-btn-icon {
+        display: flex;
+        height: 2rem;
+        width: 2rem;
+        color: #212529;
+        margin-right: 2rem;
+      }
+      
+      .s-grid-div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
+        align-content: center;
+        gap: 3rem;
+        margin-right: 15rem;
+        margin-left: 15rem;
+        
+      }
+      
+      .t-1{
+        display: grid;
+        border: 0.1rem solid #e9ecef;
+        border-radius: 1rem;
+      }
+
+      .t-2 {
+        display: grid;
+        border: 0.1rem solid #e9ecef;
+        border-radius: 1rem;
+      }
+
+      .t-3 {
+        display: grid;
+        border: 0.1rem solid #e9ecef;
+        border-radius: 1rem; 
+      }
+
+      .t-4 {
+        display: grid;
+        border: 0.1rem solid #e9ecef;
+        border-radius: 1rem;
+      }
+
+      .t-5 {
+        display: grid;
+        border: 0.1rem solid #e9ecef;
+        border-radius: 1rem;
+      }
+
+      .t-6 {
+        display: grid;
+        border: 0.1rem solid #e9ecef;
+        border-radius: 1rem;
+      }
+
+      .b-2p {
+        font-size: 2.4rem;
+        font-weight: 500;
+        color: #0D1133;
+        margin-left: 5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .b-3p {
+        font-size: 1.6rem;
+        color: #495057;
+        margin-left: 5rem;
+        margin-bottom: 3rem;
+        width: 27rem;
+      }
+
+      .read-mor {
+        display: flex;
+        align-self: start;
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: #495057;
+        margin-left: 5rem;
+        
+      }
+      
+      .read-mor-icon {
+        height: 2.4rem;
+        width: 2.4rem;
+        margin-bottom: 6rem;
+      }
+
+      .icon-1 {
+        height: 5.6rem;
+        width: 5.6rem;
+        color: #fff;
+        background-color: #2EACFC; 
+        border: 1.3rem solid #2EACFC;
+        border-radius: 5rem;
+        margin-top: 6rem;
+        margin-left: 5rem;
+        margin-bottom: 3rem;
+      }
+
+      .icon-2 {
+        height: 5.6rem;
+        width: 5.6rem;
+        color: #fff;
+        background-color: #EA4D89;
+        border: 1.3rem solid #EA4D89;
+        border-radius: 5rem;
+        margin-top: 6rem;
+        margin-left: 5rem;
+        margin-bottom: 3rem;
+      }
+
+      .icon-3 {
+        height: 5.6rem;
+        width: 5.6rem;
+        color: #fff;
+        background-color: #3779FF;
+        border: 1.3rem solid #3779FF;
+        border-radius: 5rem;
+        margin-top: 6rem;
+        margin-left: 5rem;
+        margin-bottom: 3rem;
+      }
+
+      .icon-4 {
+        height: 5.6rem;
+        width: 5.6rem;
+        color: #fff;
+        background-color: #F67742;
+        border: 1.3rem solid #F67742;
+        border-radius: 5rem;
+        margin-top: 6rem;
+        margin-left: 5rem;
+        margin-bottom: 3rem;
+      }
+
+      .icon-5 {
+        height: 5.6rem;
+        width: 5.6rem;
+        color: #fff;
+        background-color: #6A88F7;
+        border: 1.3rem solid #6A88F7;
+        border-radius: 5rem;
+        margin-top: 6rem;
+        margin-left: 5rem;
+        margin-bottom: 3rem;
+      }
+
+      .icon-6 {
+        height: 5.6rem;
+        width: 5.6rem;
+        color: #fff;
+        background-color: #3BB094;
+        border: 1.3rem solid #3BB094;
+        border-radius: 5rem;
+        margin-top: 6rem;
+        margin-left: 5rem;
+        margin-bottom: 3rem;
+      }
+
+      .g-border {
+        display: flex;
+        border: 0.1rem solid #EFF1F7;
+        background-color: #EFF1F7;
+        margin-top: 8rem;
+        margin-right: 15rem;
+        margin-left: 15rem;
+        margin-bottom: 8rem;
+        height: 61rem;
+        /* width: 1200px; */
+      }
+      
+      .red-img {
+        box-sizing: border-box;
+        display: flex ;
+        width: 70rem;
+        margin-left: 7.5rem;
+        margin-right: 5rem;
+        background-image: url(about-thumb.png);
+        background-size: cover;
+      }
+      .img-txt {
+        width: 70rem;
+      }
+      .marketing {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #FD5B7E;
+        margin-top:6.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .img-bold-txt {
+        font-size: 5.6rem;
+        font-weight: 900;
+        width: 60rem;
+        color: #0E1234;
+        margin-bottom: 1.5rem;
+      }
+
+      .jolly {
+        font-size: 2.2rem;
+        font-weight:400;
+        width: 65rem;
+        color: #495057;
+        line-height: 2.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .check {
+        height: 2.4rem;
+        width: 2.4rem;
+        color: #fff;
+        border: 0.1rem solid #33C36A;
+        background-color: #33C36A;
+        border-radius: 5rem;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .c-f {
+        float: left;
+      }
+
+      .c {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #0D1133;
+        margin-top: 2rem;
+        margin-left: 1rem;
+      }
+
+      .m-p {
+        font-size: 1.6rem;
+        color: #495057;
+        width: 20rem;
+        margin-top: 0.8rem;
+        margin-right: 3.5rem;
+        margin-left: 3.5rem;
+        line-height: 2.3rem;
+      }
+
+      .check {
+        margin-top: 2rem;
+      }
+
+      .back {
+        border: 0.1rem solid #0D1133;
+        background-color: #0D1133;
+      }
+      .wherever {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        height: 10rem;
+        width: 50rem; 
+        text-align: center;
+        margin-top: 7rem;
+        font-size: 5.6rem;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 3rem;
+      }
+      .full {
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+        color: #fff;
+      }
+      .all-txt-1 {
+        height: 13rem;
+        width: 54rem;
+        border: 0.1rem solid #191C34;
+        border-radius: 0.5rem;
+        margin-bottom: 2rem;
+        margin-left: 20rem;
+      }
+      .all-txt-2 {
+        height: 13rem;
+        width: 54rem;
+        border: 0.1rem solid #191C34;
+        border-radius: 0.5rem;
+        margin-bottom: 2rem;
+        margin-left: 20rem;
+      }
+
+      .all-txt-3 {
+        height: 13rem;
+        width: 54rem;
+        border: 0.1rem solid #191C34;
+        border-radius: 0.5rem;
+        margin-left: 20rem;
+      }
+      .redcolor-redtxt {
+        display: flex;
+        margin-top: 2.5rem;
+      }
+      .red-color {
+        border: 1.1rem solid #FF3D66;
+        border-radius: 5rem;
+        height: 1.5rem;
+        width: 1.5rem;
+        background-color: #FF3D66;
+        box-shadow: 0rem 0rem 0rem 0.7rem rgb(43,24,45);
+        margin-left: 4rem;
+        margin-right: 1.7rem;
+        margin-top: 0.9rem;
+      }
+      .red-txt {
+        font-size: 3.5rem;
+        color: #fff;
+       font-weight: 500;
+       margin-bottom: 0.7rem;
+      }
+      .bluecolor-bluetxt {
+        display: flex;
+        margin-top: 2.5rem;
+      }
+      .blue-color {
+      border: 1.1rem solid #2EACFC;
+      border-radius: 5rem;
+      height: 1.5rem;
+      width: 1.5rem;
+      background-color: #2EACFC;
+      box-shadow: 0rem 0rem 0rem 0.7rem rgb(20,35,61);
+      margin-left: 4rem;
+      margin-right: 1.7rem;
+      margin-top: 0.9rem;
+
+      
+      }
+      .blue-txt {
+        font-size: 3.5rem;
+        color: #fff;
+       font-weight: 500;
+       margin-bottom: 0.7rem;
+
+      }
+      .greencolor-greentxt {
+        display: flex;
+        margin-top: 2.5rem;
+      }
+      .green-color {
+        border: 1.1rem solid #31C956;
+      border-radius: 5rem;
+      height: 1.5rem;
+      width: 1.5rem;
+      background-color: #31C956;
+      box-shadow: 0rem 0rem 0rem 0.7rem rgb(22,38,44);
+      margin-left: 4rem;
+      margin-right: 1.7rem;
+      margin-top: 0.9rem;
+      }
+      .green-txt {
+        font-size: 3.5rem;
+        color: #fff;
+       font-weight: 500;
+       margin-bottom: 0.7rem;
+      }
+      .color-p {
+        font-size: 2rem;
+        color: #868e96;
+        margin-left: 7.8rem;
+        font-weight: 500;
+      }
+      .back-img {
+        display: flex;
+        height: 70rem;
+        width: 35rem;
+        justify-content: flex-end;
+        margin-right: 15rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+      }
+
+      .mineas {
+        display: flex;
+        margin-right: 15rem;
+        margin-left: 15rem;
+        justify-content:  space-between;
+        align-items: center;
+        
+      }
+
+      .drive-how-div {
+        font-size: 4rem;
+      color: #0D1133;
+      font-weight: 600;
+      margin-left: 15rem;
+      margin-top: 10rem;
+      }
+
+      .drive-icon-p {
+        margin-left: 15rem;
+        font-size: 1.6rem;
+        color: #868e96;
+        font-weight: 500;
+        margin-top: 1rem;
+        margin-bottom: 8rem;
+
+      }
+
+      .drive-icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 13rem;
+        margin-bottom: 10rem;
+      }
+
+      .d-i-1 {
+        height: 8.2rem;
+        width: 8.2rem;
+        margin-top: 4rem;
+        margin-left: 12rem;
+        margin-right: 9.7rem;
+      }
+
+      
+      .border-1 {
+        border: 0.1rem solid #fff;
+        border-radius: 0.4rem;
+        box-shadow: 0rem 2rem 3rem 0rem rgba(0, 0, 0, 0.1);
+        margin-left: 17.5rem;
+        
+      }
+      
+      .border-1-number {
+        font-size: 4.2rem;
+        margin-left: 10.2rem;
+        margin-right: 7rem;
+      }
+      
+      .d-i-2 {
+        height: 8.2rem;
+        width: 8.2rem;
+        margin-top: 4rem;
+        margin-left: 11rem;
+        margin-right: 7rem;
+      }
+      
+      .border-2 {
+        border: 0.1rem solid #fff;
+        border-radius: 0.4rem;
+        box-shadow: 0rem 2rem 3rem 0rem rgba(0, 0, 0, 0.1);
+        width: 29.9rem;
+      }
+
+      .border-2-number {
+        font-size: 4.6rem;
+        margin-left: 9.9rem;
+        margin-right: 8rem;
+      }
+      
+
+      .d-i-3 {
+        height: 8.2rem;
+        width: 8.2rem;
+        margin-top: 4rem;
+        margin-left: 11rem;
+
+      }
+
+
+      .border-3 {
+        border: 0.1rem solid #fff;
+        border-radius: 0.4rem;
+        box-shadow: 0rem 2rem 3rem 0rem rgba(0, 0, 0, 0.1);
+        width: 29.9rem;
+      }
+
+      .border-3-number {
+        font-size: 4.6rem;
+        margin-left: 10rem;
+        margin-right: 5rem;
+      }
+
+      .d-i-4 {
+        height: 8.2rem;
+        width: 8.2rem;
+        margin-top: 4rem;
+        margin-left: 10.5rem;
+      }
+      
+
+      .border-4 {
+        border: 0.1rem solid #fff;
+        border-radius: 0.4rem;
+        box-shadow: 0rem 2rem 3rem 0rem rgba(0, 0, 0, 0.1);
+        width: 29.9rem;
+        margin-right: 17.5rem;
+      }
+
+      .border-4-number {
+        font-size: 4.6rem;
+        margin-left: 8.5rem;
+        margin-right: 5rem;
+      }
+
+      .all-border-p {
+        display: flex;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 1.6rem;
+        margin-bottom: 4rem;
+        color: #495157;
+      }
+
+      .img-vid {
+        display: flex;
+        margin-left: 15rem;
+      }
+
+      .play-icon {
+        display:flex; 
+        height: 5.6rem;
+        width: 5.6rem;
+        color: #FF3D66;
+        margin-top: -24.9rem;
+        margin-left: 50rem;
+        z-index: 2;
+        
+      }
+      .imggg {
+        display: flex;
+        height: 50rem;
+        width: 126rem;
+        z-index: 1;
+      }
+
+      .slide {
+        display: flex;
+        height: 49rem;
+        width: 52.3rem;
+        margin-left: 3rem;
+        margin-right: 15rem;
+        margin-top: 0.5rem;
+      }
+
+      .watch-btn {
+        display: flex;
+        margin-top: 3rem;
+      }
+
+      .watch {
+        font-size: 4.2rem;
+        font-weight: bold;
+        color: #0D1133;
+        margin-left: 24rem;
+        margin-right: auto;
+        margin-bottom: 1rem;
+      }
+
+      .b-btn {
+        display: flex;
+        text-decoration: none;
+        color: #212529;
+        font-size: 1.8rem;
+        font-weight: 500;
+        height: 5rem;
+        width: 16rem;
+        padding: 1.3rem 3.2rem;
+        border: 0.1rem solid #ced4da;
+        border-radius: 5rem;
+        margin-left: 24rem;
+        margin-bottom: 10rem;
+      }
+
+      .left-right-btn {
+        display: flex;
+        justify-items: flex-end;
+      }
+
+      .left-btn {
+        height: 4.2rem;
+        width: 4.2rem;
+        padding: 1rem;
+        color: #495057;
+        border: 0.1rem solid #adb5bd;
+        border-radius: 5rem;
+        margin-right: 0.5rem;
+      }
+
+      .right-btn {
+        height: 4.2rem;
+        width: 4.2rem;
+        padding: 1rem;
+        color: #495057;
+        border: 0.1rem solid #adb5bd;
+        border-radius: 5rem;
+        margin-left: 0.5rem;
+        margin-right: 15rem;
+      }
+
+      .wireless {
+        font-size: 2.3rem;
+        color: #495057;
+        margin-left: 24rem;
+        width: 95rem;
+        margin-bottom: 4rem;
+      }
+
+      .all-apps {
+        border: 0.1rem solid #EFF1F7;
+        background-color: #EFF1F7;
+        width: auto;
+        margin-bottom: 5rem;
+      }
+      .download {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color:#FF3D66;
+        margin-top: 10rem;
+        margin-left: 15rem;
+        margin-bottom: 1rem;
+      }
+
+      .app {
+        display: block;
+        font-size: 5.2rem;
+        font-weight: 600;
+        color: #0E1234;
+        margin-left: 15rem;
+        margin-bottom: 1rem;
+        text-align:left;
+      }
+
+      .jolly-2 {
+        font-size: 2rem;
+        font-weight: 300;
+        width: 57rem;
+        color: #505056;
+        line-height: 2.5rem;
+        margin-bottom: 3rem;
+        margin-left: 15rem;
+      }
+
+      .download-flex {
+        display: flex;
+      }
+
+      .ios-border {
+        border: 0.1rem solid #0D1133;
+        background-color: #0D1133;
+        height: 6.2rem;
+        width: 16rem;
+        border-radius: 1.2rem;
+        margin-left: 15rem;
+        margin-right: 1rem;
+        margin-bottom: 15rem;
+
+      }
+
+      .ios-icon {
+        float: left;
+        height: 2.8rem;
+        width: 2.8rem;
+        margin-top: 1.4rem;
+        margin-left: 2rem;
+        margin-right: 0.5rem;
+      }
+
+      .download-white {
+        font-size: 1.2rem;
+        color: #fff;
+        margin-top: 1.4rem;
+        margin-right: 0.5rem;
+      }
+
+      .ios {
+        font-size: 2rem;
+        font-weight: 500;
+        color: #fff;
+      }
+
+      .android-border {
+        border: 0.2rem solid #0E1234;
+        background-color: #fff;
+        height: 6.2rem;
+        width: 16rem;
+        border-radius: 1.2rem;
+
+      }
+
+      .android-icon {
+        float: left;
+        height: 2.8rem;
+        width: 2.8rem;
+        margin-top: 1.4rem;
+        margin-left: 2rem;
+        margin-right: 0.5rem;
+
+      }
+
+      .download-black {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #0E1234;
+        margin-top: 1.4rem;
+        margin-right: 0.5rem;
+      }
+
+      .android {
+        font-size: 2rem;
+        font-weight: 500;
+        color: #0E1234;
+      }
+
+
+      .simple {
+        display: flex;
+        justify-content: center;
+        font-size: 7rem;
+        font-weight: 600;
+        color: #0E1234;
+        margin-bottom: 1rem;
+      }
+
+      .s-p {
+        display: flex;
+        justify-content: center;
+        font-size: 2.8rem;
+        color: #343a40;
+        font-weight: 400;
+      }
+
+      .m-y-btns {
+        border: 0.2rem solid #dee2e6;
+        border-radius: 5rem;
+        height: 4.8rem;
+        width: 24rem;
+        display: flex;
+        margin-top: 5rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      
+      .monthly {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.1rem solid #FF3D66;
+        background-color: #FF3D66;
+        border-radius: 5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        font-size: 1.6rem;
+
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+        margin-left: 0.3rem;
+        color: #fff;
+        text-decoration: none;
+
+      }
+
+      .yearly {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 1.6rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        color: #495057;
+        font-weight: 500;
+
+      }
+
+
+      .three-clms {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        gap: 4rem;
+        margin-top: 5rem;
+        margin-left: 15rem;
+        margin-right: 15rem;
+      }
+
+      .fresh-clm {
+        border: 0.1rem solid #e9ecef;
+        border-radius: 0.5rem;
+        margin-bottom: 10rem;
+        height: 50rem;
+      }
+
+      .fresh {
+        font-size: 2.4rem;
+        font-weight: 500;
+        color: #0E1234;
+        margin-top: 4rem;
+        margin-left: 4.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .price-month {
+        display: flex;
+        margin-bottom: 1rem;
+      }
+
+      .dollar {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-top: 0.7rem;
+        margin-right: 0.5rem;
+        margin-left: 4.5rem; 
+      }
+      
+
+      .price {
+        font-size: 4.2rem;
+        color: #0E1234;
+      }
+
+      .month {
+        display: flex;
+        align-items: flex-end;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #495057;
+        margin-bottom:0.8rem;
+      }
+
+      .list-p {
+        margin-left: 4.5rem;
+        padding-bottom: 3rem;
+        border-bottom: 0.1rem solid #ced4da;
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #6C6C71;
+        margin-right: 4.5rem;
+        padding-right: 12rem;
+        margin-bottom: 3rem;
+      }
+
+      .list {
+        list-style: none;
+      }
+
+      .list-item {
+       display: flex;
+       align-items: center;
+
+      }
+
+      .blue-check {
+        height: 3.2rem;
+        width: 3.2rem;
+        border: 0.3rem solid #EEF4FE;
+        border-radius: 10rem;
+        background-color: #EEF4FE;
+        margin-left: 4.5rem;
+        margin-right: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .check-p { 
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #0E1234;
+      }
+
+      .sprt {
+        margin-bottom: 3rem;
+      }
+
+     .plan-white-div {
+       margin-top: 5rem;
+
+      }
+      
+      
+      .plan-white {
+        border: 0.1rem solid #dee2e6;
+        border-radius: 5rem;
+        font-size: 1.6rem;
+        text-decoration: none;
+        font-weight: 500;
+        color: #202342;
+        margin-top: 5rem;
+        margin-left: 4.5rem;
+        padding-top: 1.3rem;
+        padding-bottom: 1.3rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+
+
+      .sweet-clm {
+        border-top: 0.3rem solid #FF3D66;
+        border-radius: 0.4rem;
+        box-shadow: 0rem 2rem 3rem 0rem rgba(0, 0, 0, 0.1);
+        height: 50rem;
+        position: relative;
+      }
+
+      .sweet-clm::after {
+        border: 0.1rem solid #2B6DF5;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        content: "Most Popular";
+        position: absolute;
+        top: 3rem;
+        right: 0;
+
+        font-size: 1.6rem;
+        color: #fff;
+        font-weight: 700;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        background-color: #2B6DF5;
+      }
+
+      .sweet {
+        font-size: 2.4rem;
+        font-weight: 500;
+        color: #0E1234;
+        margin-top: 4rem;
+        margin-left: 4.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .plan-pink-div {
+        margin-top: 5rem;
+      margin-left: 4.5rem;
+      }
+
+      .plan-pink {
+        border: 0.1rem solid #FF3D66;
+        background-color: #FF3D66;
+        border-radius: 5rem;
+        font-size: 1.6rem;
+        text-decoration: none;
+        font-weight: 500;
+        color: #fff;
+        padding-top: 1.3rem;
+        padding-bottom: 1.3rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+
+      .green-check {
+        height: 3.2rem;
+        width: 3.2rem;
+        border: 0.3rem solid #EFFAF3;
+        border-radius: 10rem;
+        background-color: #EFFAF3;
+        margin-left: 4.5rem;
+        margin-right: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .juicy-clm {
+        border: 0.1rem solid #e9ecef;
+        border-radius: 0.5rem;
+        height:49rem;
+      }
+
+      .juicy {
+        font-size: 2.4rem;
+        font-weight: 500;
+        color: #0E1234;
+        margin-top: 4rem;
+        margin-left: 4.5rem;
+        margin-bottom: 1rem;
+        
+      }
+      
+      .plan-white-div {
+        margin-top: 5rem;
+      }
+
+      .blue-back {
+        box-sizing: border-box;
+        height: auto;
+        background-image: url(blue-background.jpg);
+        background-size: cover;
+        margin-left: 15rem;
+        margin-right: 15rem;
+        
+      }
+
+      .blue-left {
+        float: left;
+      }
+
+
+      .happy-man {
+        height: 20rem;
+        width: 20rem;
+        border-radius: 10rem;
+        margin-top: 15rem;
+        margin-left: 17.5rem;
+        margin-right: 7.5rem;
+      }
+
+      .stars {
+        display: flex;
+        margin-top: 1rem;
+        margin-left: 22.5rem;
+      }
+
+      .star {
+        height: 1.6rem;
+        width: 1.6rem;
+        margin-right:0.5rem;
+      }
+
+      .review {
+        font-size: 1.2rem;
+        color: #ced4da;
+        margin-top: 1rem;
+        margin-left: 24rem;
+      }
+
+      .long-p {
+        padding-top: 15rem;
+        margin-bottom: 2rem;
+        font-size: 3.6rem;
+        color: #fff;
+        line-height: 5rem;
+      }
+
+      .h-w {
+        margin-left: 45rem;
+      }
+
+      .h {
+        font-size: 3.2rem;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .w {
+        float: left;
+        color: #ced4da;
+        font-size: 2.4rem;
+      }
+
+
+      .r-l-b {
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 15rem;
+        margin-bottom: 10rem;
+      }
+
+      .l-b {
+        height: 5.6rem;
+        width: 5.6rem;
+        color: #fff;
+        padding: 1.3rem;
+        border: 0.1rem solid #adb5bd;
+        border-radius: 10rem;
+        margin-right: 1rem;
+        
+      }
+
+      .r-b {
+        height: 5.6rem;
+        width: 5.6rem;
+        color: #fff;
+        padding: 1.3rem;
+        border: 0.1rem solid #adb5bd;
+        border-radius: 10rem;
+        margin-right: 16rem;
+      }
+
+      .appie-works-p {
+        font-size: 4.2rem;
+        font-weight: 600;
+        color: #0D1133;
+        width: 50rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+        
+      }
+
+      .join-p {
+        display: flex;
+        justify-content: center;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: #868e96;
+        margin-bottom: 5rem;
+      }
+
+      .all-sponser {
+        display: grid;
+        grid-template-rows: 11rem 15rem;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .first-part {
+        margin-bottom: 2.5rem;
+      }
+
+      .sponser-1 {
+        border: 0.1rem solid #fff;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        box-shadow: 0rem 2rem 3rem 0rem rgba(0, 0, 0, 0.2);
+        margin-right: 2.5rem;
+        height: 8rem;
+        width: 7.7rem;
+      }
+
+      .sponser-2 {
+        border: 0.1rem solid #fff;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        box-shadow: 0rem 2rem 3rem 0rem rgba(0, 0, 0, 0.2);
+        margin-right: 2.5rem;
+        height: 8rem;
+      }
+
+      .sponser-3 {
+        border: 0.1rem solid #fff;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        box-shadow: 0rem 2rem 3rem 0rem rgba(0, 0, 0, 0.2);
+        margin-right: 2.5rem;
+        height: 8rem;
+      }
+
+      .sponser-4 {
+        border: 0.1rem solid #fff;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        box-shadow: 0rem 2rem 3rem 0rem rgba(0, 0, 0, 0.2);
+        margin-right: 2.5rem;
+        height: 8rem;
+      }
+
+      .sponser-5 {
+        border: 0.1rem solid #fff;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        box-shadow: 0rem 2rem 3rem 0rem rgba(0, 0, 0, 0.2);
+        margin-right: 2.5rem;
+        height: 8rem;
+      }
+
+      .sponser-6 {
+        border: 0.1rem solid #fff;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        box-shadow: 0rem 2rem 3rem 0rem rgba(0, 0, 0, 0.2);
+        height: 8rem;
+      }
+
+      .sponser-7 {
+        border: 0.1rem solid #fff;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 2.3rem;
+        box-shadow: 0rem 2rem 3rem 0rem rgba(0, 0, 0, 0.2);
+        margin-right: 5rem;
+        height: 8rem;
+      }
+
+      .sponser-8 {
+        border: 0.1rem solid #fff;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 2.3rem;
+        box-shadow: 0rem 2rem 3rem 0rem rgba(0, 0, 0, 0.2);
+        height: 8rem;
+        margin-right: 5rem;
+      }
+
+      .sponser-9 {
+        border: 0.1rem solid #fff;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 2.3rem;
+        box-shadow: 0rem 2rem 3rem 0rem rgba(0, 0, 0, 0.2);
+        height: 8rem;
+        margin-right: 5rem;
+      }
+
+      .sponser-10 {
+        border: 0.1rem solid #fff;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 2.3rem;
+        box-shadow: 0rem 2rem 3rem 0rem rgba(0, 0, 0, 0.2);
+        height: 8rem;
+      }
+
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        background-color: #EEF1F6;
+      }
+
+      .left-footer {
+        margin-left: 10rem;
+      }
+
+      .appie-footer {
+        margin-top: 10rem;
+        margin-right: 5rem;
+      }
+
+      .wordpress {
+        font-size: 1.8rem;
+        color: #495057;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+
+
+      .read-mor-footer {
+        display: flex;
+        font-size: 2rem;
+        text-decoration: none;
+        font-weight: 500;
+        color: #212529;
+      }
+
+      .read-mor-footer-icon {
+        color: #343a40;
+        margin-left: 1rem;
+        height: 2.4rem;
+        width: 2.4rem;
+      }
+
+      .social-media-icons {
+        margin-top: 4rem;
+        margin-bottom: 7rem;
+      }
+
+      .facebook-logo {
+        height: 4.2rem;
+        width: 4.2rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background-color: #fff;
+        border-radius: 1rem;
+        margin-right: 0.5rem;
+      }
+
+      .twitter-logo {
+        height: 4.2rem;
+        width: 4.2rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background-color: #fff;
+        border-radius: 1rem;
+        margin-right: 0.5rem;
+      }
+
+      .painterest-logo {
+        height: 4.2rem;
+        width: 4.2rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background-color: #fff;
+        border-radius: 1rem;
+        margin-right: 0.5rem;
+      }
+
+      .linkedin-logo {
+        height: 4.2rem;
+        width: 4.2rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background-color: #fff;
+        border-radius: 1rem;
+      }
+
+      .company {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #1C1233;
+        margin-top: 10rem;
+        margin-bottom: 1rem;
+      }
+
+      .footer-links {
+        font-size: 1.8rem;
+        text-decoration: none;
+        font-weight: 600;
+        color: #495057;
+      }
+
+      .list-item-footer {
+        display: flex;
+        margin-top: 1rem;
+      }
+
+      .c-l {
+        margin-left: 20rem;
+      }
+
+      .support {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #1C1233;
+        margin-top: 10rem;
+        margin-bottom: 1rem;
+
+      }
+
+      .get-in-touch {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #1C1233;
+        margin-top: 10rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-icons {
+        height: 2rem;
+        width: 2rem;
+      }
+
+      .inf-p {
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: #56545B;
+        font-weight: 500;
+        margin-left: 1rem;
+      }
+
+      .footer-flex {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1.5rem;
+      }
+
+
+      .footer-system {
+        display: flex;
+      }
+
+      .footer-ios-border {
+        display: flex;
+        border: 0.1rem solid #fff;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding-top:1rem;
+        padding-bottom: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-left: 10rem;
+        margin-top: 3rem;
+      }
+
+      .footer-ios-icon {
+        height: 1.8rem;
+        width: 1.8rem;
+        margin-right: 0.7rem;
+      }
+
+      .download-btn {
+        display: flex;
+        text-decoration: none;
+        
+
+      }
+
+      .footer-download {
+        font-size: 1.6rem;
+        color: #0D1133;
+      }
+
+      .footer-android-border {
+        display: flex;
+        border: 0.1rem solid #dee2e6;
+        border-radius: 0.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-left: 1rem;
+        margin-top: 3rem;
+        margin-right: auto;
+      }
+
+      .footer-android-icon {
+        height: 1.8rem;
+        width: 1.8rem;
+        margin-right: 0.7rem;
+      }
+
+      .copyright {
+        display: flex;
+        font-size: 1.6rem;
+        margin-left: auto;
+        margin-right: 10rem;
+        margin-top: 3rem;
+        grid-column-start:4 ;
+      }
+
+      .footer-back {
+        background-color: #EEF1F6;
+        padding-bottom: 3rem;
+        
+      }
+
+      .system-border {
+        border-top: 0.1rem solid #dee2e6;
+        margin-left: 10rem;
+        margin-right: 10rem;
+      }
+
+      .footer-arrow {
+        display: flex;
+        height: 3.2rem;
+        width: 3.2rem;
+        color: #fff;
+        background-color: #F3B8C8;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        margin-left: auto;
+        margin-right: 3rem;
+      }
+
+
+      </style>
+  </head>
+  <header>
+    <div class="nav-c">
+    <nav class="nav">
+        
+        <div><img src="logo.png" class="appie" /></div>
+        <div class="both.h">
+          <a href="#" title="Home" class="nav"
+          >Home
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="chevron"
+          >
+          <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+      </a>
+    </div>
+    <div>
+      <a href="#" title="Service" class="nav">Service</a>
+    </div>
+    <div>
+      <a href="#" title="Pages" class="nav"
+      >Pages
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="chevron"
+      >
+      <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+      />
+    </svg>
+  </a>
+</div>
+<div>
+  <a href="#" title="News" class="nav"
+  >News
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  class="chevron"
+  >
+  <path
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+  />
+</svg>
+</a>
+</div>
+<div>
+  <a href="#" title="Contact" class="nav">Contact</a>
+</div>
+</nav>
+<div>
+  <a href="#" class="hbtn">Get Started</a>
+</div>
+</div>
+<div class="header-container">
+  <!-- <div class="header-container-inner"> -->
+    <h1>Ready to launch your app in one, <strong>Application</strong></h1>
+    <img class="img-1" src="hero.png" />
+    <h2>Find the best application in the appie</h2>
+    <!-- </div> -->
+    <div class="email">
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="email-icon"
+      >
+      <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+      />
+    </svg>
+
+    <form class="info-form" action="#">
+      <input
+        id="email" 
+        type="email"
+        placeholder="info@appie.com"
+        class="input-email"
+        required
+        />
+    </form>
+
+      <a href="#">
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="email-enter-icon"
+      >
+      <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+      />
+    </svg>
+  </a>
+</div>
+<div class="all-c">
+  
+  <img class="c-1" src="customer-1.jpg"/>
+  
+  <img class="c-2" src="customer-2.jpg"/>
+  
+  <img class="c-4" src="customer-4.jpg"/>
+  
+  <img class="c-5" src="customer-5.jpg"/>
+  
+  <div class="c-p">
+    <p class="t-k">30k</p>
+    <p class="feedback">Feedback</p>
+    
+  </div>
+  
+</div>
+</div>
+</div>
+</header>
+<body>
+  <section>
+
+    <div class="big-div">
+      
+      <div class="txt">
+        <div class="how-div">
+          <h3>How does it work</h3>
+        </div>
+        <p class="b-1p">The full monty spiffing good time no biggie cack grub fantastic.</p>
+      </div>
+      
+      <button href="#" class="v-btn">
+      <div>
+        <p class="v-btn-p">
+          View all Features
+        </p>
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="v-btn-icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+        </svg>
+      </div>
+    </button>
+  </div>
+  <div class="grid-div">
+    <div class="s-grid-div">
+      
+      <div class="t-1">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-1">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+        </svg>
+        
+        
+        <p class="b-2p">Fast and intuitive</p>
+        <p class="b-3p">Oxford posh bevvy give us a bell gutted mate spend a penny quaint cockup plastered.</p>
+        <a href="#" class="read-mor">Read Mor
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="read-mor-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+          </svg>
+        </a>
+      </div>
+      <div class="t-2">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </svg>
+        
+        
+        <p class="b-2p">Fast and intuitive</p>
+        <p class="b-3p">Oxford posh bevvy give us a bell gutted mate spend a penny quaint cockup plastered.</p>
+        <a href="#" class="read-mor">Read Mor
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="read-mor-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+          </svg>
+        </a>
+      </div>
+      <div class="t-3">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-3">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+        </svg>
+        
+        <p class="b-2p">Fast and intuitive</p>
+        <p class="b-3p">Oxford posh bevvy give us a bell gutted mate spend a penny quaint cockup plastered.</p>
+        <a href="#" class="read-mor">Read Mor
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="read-mor-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+          </svg>
+        </a>
+      </div>
+      <div class="t-4">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+        </svg>
+        
+        
+        <p class="b-2p">Fast and intuitive</p>
+        <p class="b-3p">Oxford posh bevvy give us a bell gutted mate spend a penny quaint cockup plastered.</p>
+        <a href="#" class="read-mor">Read Mor
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="read-mor-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+          </svg>
+        </a>
+      </div>
+      <div class="t-5">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        
+        
+        <p class="b-2p">Fast and intuitive</p>
+        <p class="b-3p">Oxford posh bevvy give us a bell gutted mate spend a penny quaint cockup plastered.</p>
+        <a href="#" class="read-mor">Read Mor
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="read-mor-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+          </svg>
+        </a>
+      </div>
+      <div class="t-6">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+        </svg>
+        
+        
+        <p class="b-2p">Fast and intuitive</p>
+        <p class="b-3p">Oxford posh bevvy give us a bell gutted mate spend a penny quaint cockup plastered.</p>
+        <a href="#" class="read-mor">Read Mor
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="read-mor-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  <section class="g-border">
+      <div class="red-img">
+      <!-- <img src="about-thumb.png" class="red-img"/> -->
+      
+      </div>
+      <div class="img-txt">
+        <p class="marketing">Marketing</p>
+        <p class="img-bold-txt">Make a lasting imapression with appie.</p>
+        <p class="jolly">Jolly good quaint james bond victoria sponge happy days cras arse over blatant.</p>
+        
+        <div class="c-f">
+        <div class="flex">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="check">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+            <p class="c">Carefully designed</p>
+          </div>
+          <p class="m-p">Mucker plastered bugger all mate morish are.</p>
+        </div>
+          
+        
+        <div class="c-f">
+        <div class="flex">
+          
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="check">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+            
+            <p class="c">Choose a App</p>
+          </div>
+          <p class="m-p">Mucker plastered bugger all mate morish are.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="back">
+
+      <div class="wherever-full">
+        <p class="wherever">Wherever you need us the most</p>
+        <p class="full">The full monty spiffing good time no biggie cack grub fantastic.</p>
+      </div>
+    <div class="mineas">
+      <div classs="color-txt">
+        <div class="all-txt-1">
+          
+          <div class="redcolor-redtxt">
+            
+            <div class="red-color"></div>
+            <p class="red-txt">Well Integrated</p>
+            
+          </div>
+          <p class="color-p">The bee's knees chancer car boot absolutely.</p>
+        </div>
+
+        <div class="all-txt-2">
+
+          
+          <div class="bluecolor-bluetxt">
+            
+            <div class="blue-color"></div>
+            <p class="blue-txt">Clean and modern Design</p>
+            
+          </div>
+          <p class="color-p">The bee's knees chancer car boot absolutely.</p>
+          
+        </div>
+
+        <div class="all-txt-3">
+          
+          <div class="greencolor-greentxt">
+            
+            <div class="green-color"></div>
+            <p class="green-txt">Light and dark mode</p>
+            
+          </div>
+          <p class="color-p">The bee's knees chancer car boot absolutely.</p>
+        </div>
+      </div>
+      <div class="back-img">
+        <img src="features-thumb-2.png">
+      </div>
+    </div>
+    </section>
+
+    <section>
+
+      <div>
+        <p class="drive-how-div">How does it work</p>
+      <p class="drive-icon-p">The full monty spiffing good time no biggie cack grub fantastic.</p>
+    </div>
+    
+    <div class="drive-icons">
+      <div class="border-1">
+        <svg class="d-i-1" id="Layer_1" enable-background="new 0 0 512 512" height="64px" viewBox="0 0 512 512" width="64px" xmlns="http://www.w3.org/2000/svg"><path id="XMLID_802_" d="m428.842 321.658c0 62.805-50.913 36.579-113.718 36.579s-113.718 26.226-113.718-36.579 50.913-113.718 113.718-113.718 113.718 50.914 113.718 113.718z" fill="#6d81d5"/><g fill="#5169cd"><path id="XMLID_803_" d="m303.168 358.535c-57.189 2.701-101.76 21.884-101.76-36.872 0-32.388 13.545-61.611 35.264-82.33 37.757 27.038 63.27 70.126 66.496 119.202z"/><path id="XMLID_804_" d="m428.843 321.663c0 40.253-20.915 43.933-52.478 41.376 17.781-2.422 28.574-12.452 28.574-41.376 0-58.766-44.572-107.121-101.76-113.089 3.927-.423 7.906-.629 11.947-.629 62.806.001 113.717 50.912 113.717 113.718z"/><path id="XMLID_805_" d="m422.895 285.266c-.32.01-.629.01-.948.01-34.758 0-65.631-16.895-84.866-42.892-6.968 2.072-14.328 3.206-21.956 3.206-21.616 0-41.18-8.968-55.148-23.389 16.328-9.092 35.13-14.256 55.148-14.256 50.076.001 92.597 32.368 107.77 77.321z"/></g><circle id="XMLID_1170_" cx="315.124" cy="168.767" fill="#8897dc" r="61.363"/><path id="XMLID_807_" d="m376.489 168.765c0 29.306-20.544 53.808-48.015 59.9-7.69-14.627-12.04-31.264-12.04-48.901 0-25.388 9.009-48.705 23.997-66.919 21.266 9.637 36.058 31.047 36.058 55.92z" fill="#6d81d5"/><path id="XMLID_809_" d="m288.05 369.088c0 79.543-64.482 46.327-144.025 46.327s-144.025 33.216-144.025-46.327 64.482-144.025 144.025-144.025 144.025 64.482 144.025 144.025z" fill="#64b9fc"/><path id="XMLID_810_" d="m210.097 241.096c-16.884 16.998-40.273 27.533-66.074 27.533s-49.19-10.545-66.064-27.543c19.791-10.236 42.252-16.019 66.064-16.019s46.283 5.783 66.074 16.029z" fill="#31a7fb"/><path id="XMLID_811_" d="m288.046 369.09c0 49.282-24.76 55.282-62.518 52.694 23.956-2.484 38.624-14.771 38.624-52.694 0-75.516-58.127-137.457-132.076-143.528 3.938-.33 7.927-.495 11.947-.495 79.547 0 144.023 64.477 144.023 144.023z" fill="#31a7fb"/><circle id="XMLID_1163_" cx="144.025" cy="175.45" fill="#8dcafc" r="77.717"/><path id="XMLID_813_" d="m221.745 175.455c0 42.912-34.8 77.712-77.722 77.712-4.123 0-8.164-.319-12.112-.938 37.171-5.814 65.61-37.985 65.61-76.774 0-38.799-28.44-70.971-65.61-76.784 3.948-.619 7.989-.938 12.112-.938 42.923 0 77.722 34.8 77.722 77.722z" fill="#64b9fc"/><circle id="XMLID_1158_" cx="421.947" cy="179.761" fill="#ec6264" r="90.053"/><path id="XMLID_815_" d="m511.996 179.756c0 49.736-40.314 90.061-90.05 90.061-4.793 0-9.494-.371-14.081-1.103 43.036-6.752 75.96-44.015 75.96-88.958 0-44.932-32.924-82.196-75.96-88.948 4.587-.732 9.288-1.103 14.081-1.103 49.735 0 90.05 40.325 90.05 90.051z" fill="#e64649"/><path id="XMLID_816_" d="m438.953 212.058h-9.28v-72.321c0-4.267-3.459-7.726-7.726-7.726h-11.728c-4.267 0-7.726 3.459-7.726 7.726s3.459 7.726 7.726 7.726h4.002v64.595h-9.28c-4.267 0-7.726 3.459-7.726 7.726s3.459 7.726 7.726 7.726h34.013c4.267 0 7.726-3.459 7.726-7.726 0-4.266-3.46-7.726-7.727-7.726z" fill="#eff5f6"/></svg> 
+        <p class="border-1-number"><strong>45</strong>k+</p>
+        <p class="all-border-p">Active Installation</p>
+      </div>
+      <div class="border-2">
+        <svg class="d-i-2" height="64px" width="64px" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 512 477.1" style="enable-background:new 0 0 512 477.1;" xml:space="preserve">
+        <style type="text/css">
+          .st0{fill:#D6AA49;}
+          .st1{fill:#2783EC;}
+          .st2{fill:#439AF6;}
+          .st3{fill:#F0F2F5;}
+          .st4{fill:#FCCB55;}
+          .st5{fill:#FFD880;}
+          .st6{fill:#1F61A3;}
+          .st7{fill:#FFE7B3;}
+        </style>
+        <path class="st0" d="M358.4,341.5h51.2v93.9h-51.2V341.5z"/>
+        <path class="st1" d="M52.7,349.9h-1.5c-24-0.9-42.9-20.7-42.7-44.7V25.6c0-9.4,7.7-17,17.1-17.1h120.9c4.5,0,8.9,1.8,12.1,5
+        l24.1,24.1c3.2,3.2,7.6,5,12.1,5h103.9c9.4,0,17,7.7,17.1,17.1v34.1l-221.9,256L52.7,349.9z"/>
+        <path class="st2" d="M401.1,110.9v238.9H52.7c23-0.8,41.2-19.7,41.1-42.7V110.9c0-9.4,7.7-17,17.1-17.1H384
+        C393.4,93.9,401,101.5,401.1,110.9z"/>
+        <path class="st3" d="M136.5,128h102.4c4.7,0,8.5,3.8,8.5,8.5v51.2c0,4.7-3.8,8.5-8.5,8.5H136.5c-4.7,0-8.5-3.8-8.5-8.5v-51.2
+        C128,131.8,131.8,128,136.5,128z"/>
+        <path class="st4" d="M349.9,418.3h68.3c18.9,0,34.1,15.3,34.1,34.1v8.5c0,4.7-3.8,8.5-8.5,8.5H324.3c-4.7,0-8.5-3.8-8.5-8.5v-8.5
+        C315.7,433.5,331,418.3,349.9,418.3z"/>
+        <path class="st5" d="M324.3,315.9c-9.4-4.1-17.9-10.2-24.7-17.9c-22.4-22.4-35-52.8-35-84.5c0-4.7,3.8-8.5,8.5-8.5h221.9
+        c4.7,0,8.5,3.8,8.5,8.5c0,31.7-12.6,62.1-35,84.5c-6.9,7.7-15.3,13.8-24.7,17.9H324.3z"/>
+        <path class="st4" d="M324.3,179.3h119.5c4.7,0,8.5,3.8,8.5,8.5v110.9c0,37.7-30.6,68.3-68.3,68.3s-68.3-30.6-68.3-68.3V187.9
+        C315.7,183.2,319.6,179.3,324.3,179.3z"/>
+        <path class="st6" d="M230.4,238.9h-93.9c-4.7,0-8.5-3.8-8.5-8.5s3.8-8.5,8.5-8.5h93.9c4.7,0,8.5,3.8,8.5,8.5
+        S235.1,238.9,230.4,238.9z"/>
+        <path class="st6" d="M196.3,273.1h-59.7c-4.7,0-8.5-3.8-8.5-8.5s3.8-8.5,8.5-8.5h59.7c4.7,0,8.5,3.8,8.5,8.5S201,273.1,196.3,273.1z
+        "/>
+        <g>
+          <path class="st7" d="M349.9,230.5c-4.7,0-8.5-3.8-8.5-8.5v-8.5c0-4.7,3.8-8.5,8.5-8.5c4.7,0,8.5,3.8,8.5,8.5v8.5
+          C358.4,226.7,354.6,230.5,349.9,230.5z"/>
+          <path class="st7" d="M384,341.5c-23.6,0-42.6-19.1-42.7-42.7v-42.7c0-4.7,3.8-8.5,8.5-8.5c4.7,0,8.5,3.8,8.5,8.5v42.7
+          c0,14.1,11.5,25.6,25.6,25.6c4.7,0,8.5,3.8,8.5,8.5S388.7,341.5,384,341.5z"/>
+        </g>
+      </svg>
+        <p class="border-2-number"><strong>108</strong>+</p>
+        <p class="all-border-p">Active Installation</p>
+      </div>
+      <div class="border-3">
+        <svg class="d-i-3" id="Capa_1" enable-background="new 0 0 512 512" height="64px" viewBox="0 0 512 512" width="64px" xmlns="http://www.w3.org/2000/svg"><g><g><g><g><path d="m215.008 226.584c5.882-13.617 9.148-28.628 9.148-44.404 0-61.899-50.179-112.078-112.078-112.078s-112.078 50.179-112.078 112.077 50.179 112.078 112.078 112.078c14.765 0 28.86-2.861 41.77-8.049 11.614-27.102 33.709-48.686 61.16-59.624z" fill="#fd4755"/><g><path d="m43.176 182.179c0-54.513 38.922-99.929 90.49-109.992-6.987-1.363-14.202-2.086-21.588-2.086-61.899.001-112.078 50.179-112.078 112.078s50.179 112.078 112.078 112.078c7.386 0 14.601-.722 21.588-2.086-51.568-10.063-90.49-55.478-90.49-109.992z" fill="#fb2b3a"/></g><g><path d="m147.691 245.195c-4.143 0-7.5-3.358-7.5-7.5 0-15.502-12.611-28.114-28.113-28.114s-28.113 12.612-28.113 28.114c0 4.142-3.357 7.5-7.5 7.5s-7.5-3.358-7.5-7.5c0-23.773 19.341-43.114 43.113-43.114s43.113 19.341 43.113 43.114c0 4.142-3.357 7.5-7.5 7.5z" fill="#c41926"/></g><g><g><path d="m82.176 165.588h-24.626c-4.143 0-7.5-3.358-7.5-7.5s3.357-7.5 7.5-7.5h24.626c4.143 0 7.5 3.358 7.5 7.5s-3.358 7.5-7.5 7.5z" fill="#c41926"/></g><g><path d="m166.605 165.588h-24.625c-4.143 0-7.5-3.358-7.5-7.5s3.357-7.5 7.5-7.5h24.625c4.143 0 7.5 3.358 7.5 7.5s-3.357 7.5-7.5 7.5z" fill="#c41926"/></g></g></g></g></g><g><path d="m297.769 225.792c-12.909-5.188-27.004-8.049-41.769-8.049-61.899 0-112.078 50.179-112.078 112.078s50.179 112.077 112.078 112.077 112.078-50.179 112.078-112.078c0-15.776-3.266-30.788-9.148-44.404-27.451-10.938-49.546-32.522-61.161-59.624z" fill="#fed402"/><g><path d="m186.978 329.821c0-54.535 38.952-99.964 90.55-110.004-6.968-1.356-14.163-2.074-21.528-2.074-61.899 0-112.078 50.179-112.078 112.078s50.179 112.078 112.078 112.078c7.364 0 14.56-.718 21.528-2.074-51.598-10.04-90.55-55.47-90.55-110.004z" fill="#fac600"/></g><g><g><path d="m224.576 323.704c-4.143 0-7.5-3.358-7.5-7.5v-21.997c0-4.142 3.357-7.5 7.5-7.5s7.5 3.358 7.5 7.5v21.997c0 4.142-3.357 7.5-7.5 7.5z" fill="#fb8801"/></g><g><path d="m287.424 323.704c-4.143 0-7.5-3.358-7.5-7.5v-21.997c0-4.142 3.357-7.5 7.5-7.5s7.5 3.358 7.5 7.5v21.997c0 4.142-3.358 7.5-7.5 7.5z" fill="#fb8801"/></g></g><g><path d="m293.185 372.934h-74.369c-4.143 0-7.5-3.358-7.5-7.5s3.357-7.5 7.5-7.5h74.369c4.143 0 7.5 3.358 7.5 7.5s-3.358 7.5-7.5 7.5z" fill="#fb8801"/></g></g><g><g><circle cx="399.922" cy="182.179" fill="#97d729" r="112.078"/></g><g><path d="m330.597 182.179c0-54.588 39.028-100.053 90.702-110.033-6.921-1.337-14.065-2.045-21.376-2.045-61.899 0-112.078 50.179-112.078 112.078s50.179 112.078 112.078 112.078c7.311 0 14.456-.708 21.376-2.045-51.674-9.98-90.702-55.445-90.702-110.033z" fill="#8bc727"/></g><g><path d="m399.922 245.195c-23.772 0-43.113-19.341-43.113-43.114 0-4.142 3.357-7.5 7.5-7.5s7.5 3.358 7.5 7.5c0 15.502 12.611 28.114 28.113 28.114s28.113-12.612 28.113-28.114c0-4.142 3.357-7.5 7.5-7.5s7.5 3.358 7.5 7.5c0 23.773-19.341 43.114-43.113 43.114z" fill="#78a91f"/></g><g><g><path d="m376.44 168.995c-4.143 0-7.5-3.358-7.5-7.5 0-5.751-4.679-10.43-10.43-10.43s-10.43 4.679-10.43 10.43c0 4.142-3.357 7.5-7.5 7.5s-7.5-3.358-7.5-7.5c0-14.022 11.407-25.43 25.43-25.43s25.43 11.408 25.43 25.43c0 4.142-3.357 7.5-7.5 7.5z" fill="#78a91f"/></g><g><path d="m459.264 168.995c-4.143 0-7.5-3.358-7.5-7.5 0-5.751-4.679-10.43-10.431-10.43-5.751 0-10.43 4.679-10.43 10.43 0 4.142-3.357 7.5-7.5 7.5s-7.5-3.358-7.5-7.5c0-14.022 11.407-25.43 25.43-25.43s25.431 11.408 25.431 25.43c0 4.142-3.358 7.5-7.5 7.5z" fill="#78a91f"/></g></g></g></g></svg>
+        <p class="border-3-number"><strong>307</strong>+</p>
+        <p class="all-border-p">Active Installation</p>
+      </div>
+      <div class="border-4">
+        <svg class="d-i-4" id="Capa_1" enable-background="new 0 0 512 512" height="64px" viewBox="0 0 512 512" width="64px" xmlns="http://www.w3.org/2000/svg"><g><path d="m506.8 402.959c-1.806 16.472-15.148 29.341-31.682 30.499-1.368.097-2.726.193-4.085.281-10.081.684-17.919 9.056-17.919 19.163v38.204c0 12.852-14.71 20.145-24.932 12.361-18.655-14.21-43.473-35.346-58.7-57.263-3.603-5.19-9.555-8.214-15.876-8.179-46.883.237-93.766-1.271-140.649-4.567-13.071-.912-24.169-9.126-29.113-20.68-1.315-3.033-2.192-6.312-2.569-9.739-6.943-63.425-6.943-126.859 0-190.294 1.806-16.455 15.157-29.263 31.664-30.42 69.842-4.901 139.676-5.882 209.51-2.946 17.55.728 35.11 1.709 52.66 2.946 16.516 1.157 29.876 13.965 31.682 30.42 6.944 63.407 6.944 126.806.009 190.214z" fill="#78d0b1"/><path d="m199.16 211.001c-7.111 64.942-7.111 129.891 0 194.82.385 3.515 1.284 6.867 2.629 9.977 3.44 8.043 9.794 14.505 17.716 18.108-2.183-.142-4.366-.291-6.55-.446-13.072-.912-24.171-9.125-29.112-20.683-1.318-3.035-2.197-6.313-2.569-9.74-6.948-63.421-6.948-126.857 0-190.292 1.805-16.452 15.154-29.261 31.66-30.416 3.224-.223 6.448-.446 9.679-.649-12.571 4.325-21.946 15.586-23.453 29.321z" fill="#66b49d"/><g><path d="m305.554 379.278c.02 10.337 13.59 18.706 23.927 18.706h80.006c8.318 0 15.062-6.744 15.062-15.067 0-4.159-1.681-7.93-4.407-10.655s-6.496-4.412-10.655-4.412h5.408c8.318 0 15.067-6.739 15.067-15.067 0-4.164-1.681-7.925-4.417-10.655-2.721-2.726-6.487-4.407-10.651-4.407h5.413c8.216 0 14.897-6.584 15.057-14.766.17-8.454-6.943-15.368-15.398-15.368h-5.073c8.318 0 15.067-6.744 15.067-15.072 0-4.164-1.681-7.925-4.417-10.655-2.721-2.726-6.487-4.407-10.651-4.407h-42.376c-.06-.095-.079-.124-.139-.219l16.525-35.202c4.689-9.98.394-21.87-9.586-26.558-2.74-1.288-5.626-1.895-8.469-1.895-7.502 0-14.688 4.247-18.089 11.486l-7.065 15.053c-4.174 8.887-10.859 16.399-19.324 21.364-5.588 3.275-10.242 8.27-13.085 14.664-1.939 4.363-2.808 8.96-2.726 13.473z" fill="#ffddce"/><g fill="#ffcbbe"><path d="m385.494 219.986c-.68-.073-1.36-.107-2.041-.107-7.502 0-14.688 4.247-18.089 11.486l-7.065 15.053c-4.174 8.887-10.859 16.399-19.324 21.364-5.588 3.275-25.689 8.362-26.432 46.441-.058 2.974-1.132 5.719-1.919 8.459l-.063-33.064c-.083-4.514.787-9.11 2.726-13.473 2.842-6.394 7.497-11.389 13.085-14.664 8.464-4.966 15.15-12.477 19.324-21.364l7.065-15.053c3.401-7.24 10.587-11.486 18.089-11.486 2.842 0 5.729.607 8.469 1.895 2.404 1.127 4.479 2.677 6.175 4.513z"/><path d="m424.549 382.917c0 8.323-6.744 15.067-15.062 15.067h-82.095c-8.688 0-16.743-4.198-21.729-11.098h103.823c6.36 0 11.797-3.94 14.008-9.518.005.005.005.015.015.019 0 0-.005.005 0 .005.671 1.711 1.04 3.577 1.04 5.525z"/><path d="m428.898 347.233c.68 1.718 1.058 3.59 1.058 5.548 0 8.327-6.743 15.07-15.064 15.07h-5.773c-3.065 0-5.549-2.484-5.549-5.549 0-3.065 2.484-5.549 5.549-5.549h5.773c6.362.001 11.797-3.942 14.006-9.52z"/><path d="m434.311 317.1c.68 1.718 1.058 3.59 1.058 5.548 0 8.327-6.743 15.07-15.064 15.07h-5.773c-3.065 0-5.549-2.484-5.549-5.549 0-3.065 2.484-5.549 5.549-5.549h5.773c6.361 0 11.797-3.943 14.006-9.52z"/><path d="m428.905 286.966c.68 1.718 1.058 3.59 1.058 5.548 0 8.327-6.743 15.07-15.064 15.07h-5.773c-3.065 0-5.549-2.484-5.549-5.549 0-3.065 2.484-5.549 5.549-5.549h5.773c6.361.001 11.797-3.943 14.006-9.52z"/></g><path d="m263.699 289.618v93.958c0 6.516 5.283 11.799 11.799 11.799h23.265c6.516 0 11.799-5.283 11.799-11.799v-93.958c0-6.516-5.283-11.799-11.799-11.799h-23.265c-6.516 0-11.799 5.282-11.799 11.799z" fill="#f1f4f6"/><path d="m263.696 353.981v29.598c0 6.516 5.286 11.796 11.802 11.796h23.264c6.516 0 11.796-5.28 11.796-11.796v-29.598c0 6.516-5.28 11.803-11.796 11.803h-23.264c-6.516-.001-11.802-5.287-11.802-11.803z" fill="#d0e2e7"/></g><path d="m5.004 221.907c1.736 15.839 14.566 28.214 30.465 29.327 1.315.093 2.622.185 3.928.27 9.694.657 17.23 8.708 17.23 18.427v36.736c0 12.358 14.145 19.371 23.974 11.886 17.938-13.664 41.802-33.988 56.445-55.062 3.465-4.99 9.188-7.899 15.266-7.865 45.082.228 90.163-1.222 135.245-4.392 12.568-.877 23.24-8.775 27.995-19.886 1.264-2.917 2.107-6.069 2.47-9.365 6.676-60.988 6.676-121.985 0-182.982-1.737-15.822-14.575-28.138-30.448-29.251-67.16-4.711-134.31-5.655-201.461-2.832-16.876.7-33.761 1.644-50.637 2.832-15.881 1.113-28.727 13.429-30.464 29.252-6.676 60.971-6.676 121.934-.008 182.905z" fill="#f9da41"/><path d="m22.209 37.325c-6.837 62.447-6.837 124.9 0 187.334.371 3.38 1.235 6.603 2.528 9.593 3.308 7.734 9.418 13.948 17.035 17.412-2.099-.136-4.199-.28-6.298-.429-12.57-.877-23.242-8.774-27.993-19.888-1.267-2.918-2.112-6.071-2.47-9.366-6.681-60.984-6.681-121.982 0-182.98 1.735-15.82 14.572-28.136 30.444-29.248 3.1-.214 6.201-.429 9.307-.624-12.089 4.161-21.104 14.989-22.553 28.196z" fill="#edc932"/><g fill="#21386b"><path d="m215.692 125.812c9.482 0 17.195-12.817 17.195-28.572s-7.713-28.572-17.195-28.572c-9.481 0-17.194 12.817-17.194 28.572s7.713 28.572 17.194 28.572z"/><path d="m107.339 125.812c9.482 0 17.195-12.817 17.195-28.572s-7.713-28.572-17.195-28.572c-9.481 0-17.194 12.817-17.194 28.572s7.713 28.572 17.194 28.572z"/><path d="m220.739 146.815c-3.936-1.655-8.464.186-10.122 4.118-8.349 19.804-27.623 32.6-49.102 32.6-21.48 0-40.754-12.796-49.103-32.6-1.657-3.932-6.191-5.773-10.122-4.118-3.932 1.658-5.776 6.189-4.118 10.121 10.77 25.544 35.633 42.05 63.342 42.05 27.708 0 52.571-16.506 63.341-42.05 1.66-3.932-.184-8.463-4.116-10.121z"/></g></g></svg>
+        <p class="border-4-number"><strong>725</strong>k+</p>
+        <p class="all-border-p">Active Installation</p>
+      </div>
+    </div>
+  </section>
+
+
+    <section>
+
+      <div class="img-vid">
+        <div>
+          <img class="imggg" src="video-thumb-1.jpg">
+
+          <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" x="0" y="0" viewBox="0 0 320.001 320.001"  xml:space="preserve" class=""><g><path d="m295.84 146.049-256-144a16.026 16.026 0 0 0-15.904.128A15.986 15.986 0 0 0 16 16.001v288a15.986 15.986 0 0 0 7.936 13.824A16.144 16.144 0 0 0 32 320.001c2.688 0 5.408-.672 7.84-2.048l256-144c5.024-2.848 8.16-8.16 8.16-13.952s-3.136-11.104-8.16-13.952z" fill="#FF3D66" data-original="#000000"></path></g></svg>
+        </div>
+        <div>
+          
+          <img src="video-slide-1.jpg" class="slide">
+      </div>
+      
+    </div>
+    
+    <div class="watch-btn">
+      <p class="watch">Watch the tow-minute video to learn how.</p>
+      <div class="left-right-btn">
+        
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="left-btn">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+          </svg>        
+        </a>
+        
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="right-btn">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+          </svg>
+          
+        </a>
+      </div>
+    </div>
+    
+    <p class="wireless">The wireless cheesed on your bike mate zonked a load of old tosh hunky dory it's all gone to pot haggle william car boot pear shaped geeza.</p>
+    <a href="#" class="b-btn">Get Started</a>
+    
+  </section>
+
+  
+    <section apps-back>
+      <div class="all-apps">
+
+        <p class="download">Download Our App</p>
+        <p class="app">App is available <br>for free on app store</p>
+        <p class="jolly-2">Jolly good quaint james bond victoria sponge happy days cras arse over blatant.</p>
+        
+
+        <div class="download-flex">
+
+          <a href="#" class="download-btn">
+          <div class="ios-border">
+              <svg class="ios-icon" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"  x="0" y="0" viewBox="0 0 22.773 22.773" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M15.769 0h.162c.13 1.606-.483 2.806-1.228 3.675-.731.863-1.732 1.7-3.351 1.573-.108-1.583.506-2.694 1.25-3.561C13.292.879 14.557.16 15.769 0zM20.67 16.716v.045c-.455 1.378-1.104 2.559-1.896 3.655-.723.995-1.609 2.334-3.191 2.334-1.367 0-2.275-.879-3.676-.903-1.482-.024-2.297.735-3.652.926h-.462c-.995-.144-1.798-.932-2.383-1.642-1.725-2.098-3.058-4.808-3.306-8.276v-1.019c.105-2.482 1.311-4.5 2.914-5.478.846-.52 2.009-.963 3.304-.765.555.086 1.122.276 1.619.464.471.181 1.06.502 1.618.485.378-.011.754-.208 1.135-.347 1.116-.403 2.21-.865 3.652-.648 1.733.262 2.963 1.032 3.723 2.22-1.466.933-2.625 2.339-2.427 4.74.176 2.181 1.444 3.457 3.028 4.209z" fill="#FFFFFF" data-original="#000000" class=""></path></g></svg>
+              <p class="download-white">Download for</p>
+              <p class="ios">iOS</p>
+            </div>
+          </a>
+          
+          <div>
+            <a href="#" class="download-btn">
+            <div class="android-border">
+              <svg class="android-icon" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="m18.168 15.838-2.866-2.818L4.781 23.395zM18.168 8.167 4.781.61l10.521 10.375zM22.363 13.427c.858-.67.858-2.18-.057-2.85l-2.808-1.598-3.133 3.024 3.133 3.024zM2.034 24l12.234-12.002L2.034.001V0C1.415.319 1 .9 1 1.655v20.69c0 .755.415 1.336 1.034 1.655z" fill="#0D1133" data-original="#000000" class=""></path></g></svg>
+              <p class="download-black">Download for</p>
+              <p class="android">Android</p>
+            </div>
+            </a>
+            </div>
+          </div>
+      </div>
+      </section>
+      
+    </div>
+
+    <section>
+
+      <div class="price-top-txt">
+        <p class="simple">Simple pricing for Everyone</p>
+        <p class="s-p">The full monty spiffing good time no biggie cack grub fantastic.</p>
+      </div>
+      
+      <div class="m-y-btns">
+      
+        <a href="#" class="monthly">Monthly</a>
+        
+        <a href="#" class="yearly">Yearly</a>
+        
+      </div>
+      
+    <div class="three-clms">
+      <div class="fresh-clm">
+        <p class="fresh">Fresh</p>
+        
+        <div class="price-month">
+          <p class="dollar">$</p>
+          <p class="price">
+            <strong>04</strong></p>
+            <p class="month">/month</p>
+          </div>
+          
+          <p class="list-p">Get your 14 day free trail</p>
+          
+          
+          <div class="all-list">
+            
+            <ul class="list">
+              
+              <li class="list-item">
+                <svg class="blue-check" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#5B8FF7" fill-rule="evenodd" d="M20.614 5.649a1 1 0 0 1 .084 1.422L10.184 18.74a1 1 0 0 1-1.428.058l-6.084-5.727a1.008 1.008 0 0 1-.09-1.36 1.008 1.008 0 0 1 1.455-.126l4.72 4.246a1 1 0 0 0 1.412-.074l9.043-10.027a1 1 0 0 1 1.402-.082z" clip-rule="evenodd" data-original="#000000" class=""></path></g></svg>
+                <span class="check-p">60-days chat history</span>
+              </li>
+              
+              <li class="list-item">
+            <svg class="blue-check" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#5B8FF7" fill-rule="evenodd" d="M20.614 5.649a1 1 0 0 1 .084 1.422L10.184 18.74a1 1 0 0 1-1.428.058l-6.084-5.727a1.008 1.008 0 0 1-.09-1.36 1.008 1.008 0 0 1 1.455-.126l4.72 4.246a1 1 0 0 0 1.412-.074l9.043-10.027a1 1 0 0 1 1.402-.082z" clip-rule="evenodd" data-original="#000000" class=""></path></g></svg>
+
+            <span class="check-p">15 GB cloud storage</span>
+          </li>
+          
+          <li class="list-item">
+            <svg class="blue-check" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#5B8FF7" fill-rule="evenodd" d="M20.614 5.649a1 1 0 0 1 .084 1.422L10.184 18.74a1 1 0 0 1-1.428.058l-6.084-5.727a1.008 1.008 0 0 1-.09-1.36 1.008 1.008 0 0 1 1.455-.126l4.72 4.246a1 1 0 0 0 1.412-.074l9.043-10.027a1 1 0 0 1 1.402-.082z" clip-rule="evenodd" data-original="#000000" class=""></path></g></svg>
+
+            <span class="check-p" class="sprt">24/7 Support</span>
+          </li>
+          
+        </ul>
+        
+        </div>
+        <div class="plan-white-div">
+          <a href="#" class="plan-white">Choose plan</a>
+        </div>
+        
+        
+      </div>
+      
+      
+      
+      
+      <div class="sweet-clm">
+        <p class="sweet">Sweet</p>
+  
+        <div class="price-month">
+          <p class="dollar">$</p>
+          <p class="price">
+            <strong>16</strong></p>
+            <p class="month">/month</p>
+          </div>
+          
+          <p class="list-p">Billed $276 website annually.</p>
+          
+          
+          <div class="all-list">
+            
+            <ul class="list">
+              
+              <li class="list-item">
+                <svg class="blue-check" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#5B8FF7" fill-rule="evenodd" d="M20.614 5.649a1 1 0 0 1 .084 1.422L10.184 18.74a1 1 0 0 1-1.428.058l-6.084-5.727a1.008 1.008 0 0 1-.09-1.36 1.008 1.008 0 0 1 1.455-.126l4.72 4.246a1 1 0 0 0 1.412-.074l9.043-10.027a1 1 0 0 1 1.402-.082z" clip-rule="evenodd" data-original="#000000" class=""></path></g></svg>
+                <span class="check-p">60-days chat history</span>
+              </li>
+  
+              <li class="list-item">
+                <svg class="blue-check" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#5B8FF7" fill-rule="evenodd" d="M20.614 5.649a1 1 0 0 1 .084 1.422L10.184 18.74a1 1 0 0 1-1.428.058l-6.084-5.727a1.008 1.008 0 0 1-.09-1.36 1.008 1.008 0 0 1 1.455-.126l4.72 4.246a1 1 0 0 0 1.412-.074l9.043-10.027a1 1 0 0 1 1.402-.082z" clip-rule="evenodd" data-original="#000000" class=""></path></g></svg>
+                <span class="check-p">50 GB cloud storage</span>
+              </li>
+              
+              <li class="list-item">
+                <svg class="blue-check" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#5B8FF7" fill-rule="evenodd" d="M20.614 5.649a1 1 0 0 1 .084 1.422L10.184 18.74a1 1 0 0 1-1.428.058l-6.084-5.727a1.008 1.008 0 0 1-.09-1.36 1.008 1.008 0 0 1 1.455-.126l4.72 4.246a1 1 0 0 0 1.412-.074l9.043-10.027a1 1 0 0 1 1.402-.082z" clip-rule="evenodd" data-original="#000000" class=""></path></g></svg>
+                <span class="check-p" class="sprt">24/7 Support</span>
+              </li>
+              
+            </ul>
+  
+          </div>
+          
+          <div class="plan-pink-div">
+            <a href="#" class="plan-pink">Choose plan</a>
+          </div>
+  
+        </div>
+        
+        
+        
+        
+        <div class="juicy-clm">
+        <p class="juicy">Juisy</p>
+        
+        <div class="price-month">
+          <p class="dollar">$</p>
+          <p class="price">
+            <strong>27</strong></p>
+            <p class="month">/month</p>
+          </div>
+          
+          <p class="list-p">Billed $276 website annually.</p>
+          
+          
+        <div class="all-list">
+          
+          <ul class="list">
+            
+            <li class="list-item">
+              <svg class="green-check" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#39C56F" fill-rule="evenodd" d="M20.614 5.649a1 1 0 0 1 .084 1.422L10.184 18.74a1 1 0 0 1-1.428.058l-6.084-5.727a1.008 1.008 0 0 1-.09-1.36 1.008 1.008 0 0 1 1.455-.126l4.72 4.246a1 1 0 0 0 1.412-.074l9.043-10.027a1 1 0 0 1 1.402-.082z" clip-rule="evenodd" data-original="#000000" class=""></path></g></svg>
+              <span class="check-p">60-days chat history</span>
+            </li>
+            
+            <li class="list-item">
+              <svg class="green-check" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#39C56F" fill-rule="evenodd" d="M20.614 5.649a1 1 0 0 1 .084 1.422L10.184 18.74a1 1 0 0 1-1.428.058l-6.084-5.727a1.008 1.008 0 0 1-.09-1.36 1.008 1.008 0 0 1 1.455-.126l4.72 4.246a1 1 0 0 0 1.412-.074l9.043-10.027a1 1 0 0 1 1.402-.082z" clip-rule="evenodd" data-original="#000000" class=""></path></g></svg>
+              <span class="check-p">Data security</span>
+            </li>
+            
+            <li class="list-item">
+              <svg class="green-check" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#39C56F" fill-rule="evenodd" d="M20.614 5.649a1 1 0 0 1 .084 1.422L10.184 18.74a1 1 0 0 1-1.428.058l-6.084-5.727a1.008 1.008 0 0 1-.09-1.36 1.008 1.008 0 0 1 1.455-.126l4.72 4.246a1 1 0 0 0 1.412-.074l9.043-10.027a1 1 0 0 1 1.402-.082z" clip-rule="evenodd" data-original="#000000" class=""></path></g></svg>
+              <span class="check-p">100 GB cloud storage</span>
+            </li>
+            
+            <li class="list-item">
+              <svg class="green-check" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#39C56F" fill-rule="evenodd" d="M20.614 5.649a1 1 0 0 1 .084 1.422L10.184 18.74a1 1 0 0 1-1.428.058l-6.084-5.727a1.008 1.008 0 0 1-.09-1.36 1.008 1.008 0 0 1 1.455-.126l4.72 4.246a1 1 0 0 0 1.412-.074l9.043-10.027a1 1 0 0 1 1.402-.082z" clip-rule="evenodd" data-original="#000000" class=""></path></g></svg>
+              <span class="check-p" class="sprt">24/7 Support</span>
+            </li>
+
+          </ul>
+          
+        </div>
+        
+        <div class="plan-white-div">
+          <a href="#" class="plan-white">Choose plan</a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </section>
+    
+
+    <section class="blue-back">
+      <div class="blue-left">
+        <img class="happy-man" src="happy-man.jpg">
+        <div class="stars">
+          
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" x="0" y="0" viewBox="0 0 511.987 511" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path fill="#FFC107" d="M510.652 185.902a27.158 27.158 0 0 0-23.425-18.71l-147.774-13.419-58.433-136.77C276.71 6.98 266.898.494 255.996.494s-20.715 6.487-25.023 16.534l-58.434 136.746-147.797 13.418A27.208 27.208 0 0 0 1.34 185.902c-3.371 10.368-.258 21.739 7.957 28.907l111.7 97.96-32.938 145.09c-2.41 10.668 1.73 21.696 10.582 28.094 4.757 3.438 10.324 5.188 15.937 5.188 4.84 0 9.64-1.305 13.95-3.883l127.468-76.184 127.422 76.184c9.324 5.61 21.078 5.097 29.91-1.305a27.223 27.223 0 0 0 10.582-28.094l-32.937-145.09 111.699-97.94a27.224 27.224 0 0 0 7.98-28.927zm0 0" data-original="#ffc107"></path></g></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" x="0" y="0" viewBox="0 0 511.987 511" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path fill="#FFC107" d="M510.652 185.902a27.158 27.158 0 0 0-23.425-18.71l-147.774-13.419-58.433-136.77C276.71 6.98 266.898.494 255.996.494s-20.715 6.487-25.023 16.534l-58.434 136.746-147.797 13.418A27.208 27.208 0 0 0 1.34 185.902c-3.371 10.368-.258 21.739 7.957 28.907l111.7 97.96-32.938 145.09c-2.41 10.668 1.73 21.696 10.582 28.094 4.757 3.438 10.324 5.188 15.937 5.188 4.84 0 9.64-1.305 13.95-3.883l127.468-76.184 127.422 76.184c9.324 5.61 21.078 5.097 29.91-1.305a27.223 27.223 0 0 0 10.582-28.094l-32.937-145.09 111.699-97.94a27.224 27.224 0 0 0 7.98-28.927zm0 0" data-original="#ffc107"></path></g></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" x="0" y="0" viewBox="0 0 511.987 511" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path fill="#FFC107" d="M510.652 185.902a27.158 27.158 0 0 0-23.425-18.71l-147.774-13.419-58.433-136.77C276.71 6.98 266.898.494 255.996.494s-20.715 6.487-25.023 16.534l-58.434 136.746-147.797 13.418A27.208 27.208 0 0 0 1.34 185.902c-3.371 10.368-.258 21.739 7.957 28.907l111.7 97.96-32.938 145.09c-2.41 10.668 1.73 21.696 10.582 28.094 4.757 3.438 10.324 5.188 15.937 5.188 4.84 0 9.64-1.305 13.95-3.883l127.468-76.184 127.422 76.184c9.324 5.61 21.078 5.097 29.91-1.305a27.223 27.223 0 0 0 10.582-28.094l-32.937-145.09 111.699-97.94a27.224 27.224 0 0 0 7.98-28.927zm0 0" data-original="#ffc107"></path></g></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" x="0" y="0" viewBox="0 0 511.987 511" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path fill="#FFC107" d="M510.652 185.902a27.158 27.158 0 0 0-23.425-18.71l-147.774-13.419-58.433-136.77C276.71 6.98 266.898.494 255.996.494s-20.715 6.487-25.023 16.534l-58.434 136.746-147.797 13.418A27.208 27.208 0 0 0 1.34 185.902c-3.371 10.368-.258 21.739 7.957 28.907l111.7 97.96-32.938 145.09c-2.41 10.668 1.73 21.696 10.582 28.094 4.757 3.438 10.324 5.188 15.937 5.188 4.84 0 9.64-1.305 13.95-3.883l127.468-76.184 127.422 76.184c9.324 5.61 21.078 5.097 29.91-1.305a27.223 27.223 0 0 0 10.582-28.094l-32.937-145.09 111.699-97.94a27.224 27.224 0 0 0 7.98-28.927zm0 0" data-original="#ffc107"></path></g></svg>
+          <svg class="star" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" x="0" y="0" viewBox="0 0 511.987 511" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path fill="#FFC107" d="M510.652 185.902a27.158 27.158 0 0 0-23.425-18.71l-147.774-13.419-58.433-136.77C276.71 6.98 266.898.494 255.996.494s-20.715 6.487-25.023 16.534l-58.434 136.746-147.797 13.418A27.208 27.208 0 0 0 1.34 185.902c-3.371 10.368-.258 21.739 7.957 28.907l111.7 97.96-32.938 145.09c-2.41 10.668 1.73 21.696 10.582 28.094 4.757 3.438 10.324 5.188 15.937 5.188 4.84 0 9.64-1.305 13.95-3.883l127.468-76.184 127.422 76.184c9.324 5.61 21.078 5.097 29.91-1.305a27.223 27.223 0 0 0 10.582-28.094l-32.937-145.09 111.699-97.94a27.224 27.224 0 0 0 7.98-28.927zm0 0" data-original="#ffc107"></path></g></svg>
+          
+          
+        </div>
+        <p class="review">(4.7)review</p>
+      </div>
+      <p class="long-p">Why I say old chap that is spiffing chip shop such a fibber the bee's<br> knees,the wireless Richard fantastic do one cracking goal pukka<br> baking cakes starkers mush don't get shirty with me argy bargy, I naff<br> chimney pot bilmey he lost his bottle cup.</p>
+      
+      <div class="all-down-part">
+        
+        <div class="h-w">
+          
+          <p class="h">Hanson Deck</p>
+          
+          
+          
+          <p class="w">Web developer</p>
+          <div class="r-l-b">
+            <a href="#" >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="l-b">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+              </svg>
+              
+            </a>
+            
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="r-b">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+              </svg>
+              
+            </a>
+          </div>
+        </div>
+        
+      </div>
+      
+    </section>
+    
+    <section>
+
+      <div>
+        <p class="appie-works-p">Appie works best with your favorite platforms</p>
+        <p class="join-p">Join over 40,000 businesses worldwide.</p>
+      </div>
+      
+      <div class="all-sponser">
+
+        <div class="first-part">
+          
+          <img class="sponser-1" src="sponser-1.png">
+          <img class="sponser-2" src="sponser-2.png">
+          <img class="sponser-3" src="sponser-3.png">
+          <img class="sponser-4" src="sponser-4.png">
+          <img class="sponser-5" src="sponser-5.png">
+          <img class="sponser-6" src="sponser-6.png">
+          
+        </div>
+        
+        <div class="second-part">
+          
+          <img class="sponser-7" src="sponser-7.png">
+          <img class="sponser-8" src="sponser-8.png">
+          <img class="sponser-9" src="sponser-9.png">
+          <img class="sponser-10" src="sponser-10.png">
+          
+        </div>
+        
+      </div>
+      
+    </section>
+      
+    </body>
+
+  <footer>
+    <div class="footer-back">
+      
+      <div class="footer-grid">
+        
+        <div class="left-footer">
+          
+          <div>
+          <img src="logo.png" class="appie-footer" />
+          <p class="wordpress">Appie WordPress is theme is the last<br>theme you will ever have.</p>
+          <div class="read-all">
+            
+            <a href="#" class="read-mor-footer">Read Mor
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="read-mor-footer-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+              </svg>
+            </a>
+          </div>
+          <div class="social-media-icons">
+            <svg class="facebook-logo" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="" height="" x="0" y="0" viewBox="0 0 155.139 155.139" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z" fill="#010002" data-original="#010002" class=""></path></g></svg>
+            <svg class="twitter-logo" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="" height="" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" fill="#000000" data-original="#000000"></path></g></svg>
+            <svg class="painterest-logo" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="" height="" x="0" y="0" viewBox="0 0 152 152" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path d="M116.7 24.1c-11.2-8.4-25.8-13-41.3-13s-30 4.7-40.8 13.3c-11.6 8.9-18 21.1-18 34.2 0 12.2 1.9 21.6 11.3 32.4 1.1 1.3 2.9 1.5 4.2.3l.2-.2 9.2-8.8c1.1-1.1 1.3-2.9.2-4.2-5.7-6.8-6.3-11.7-6.3-19.8 0-15.9 17.8-28.7 39.9-28.7 10.7-.2 21.2 2.9 30.1 9.2 7.1 5.3 11 12.2 11 19.3 0 6.8-1.5 16-8.6 21.7-6.8 5.3-17.5 6.8-30.3 4.1V49.7c0-1.6-1.3-2.9-2.9-2.9H61.4c-1.6 0-3.1 1.3-3.1 3.1V120c0 .5-.3 1-.6 1.3s-.6.3-1.1.3l-11-2.3c-1.6-.3-3.2.6-3.6 2.3l-2.6 13.1c-.3 1.6.6 3.2 2.4 3.6l11 2.3c1.3.3 2.8.5 4.1.5 4.5 0 9.1-1.5 12.6-4.4 4.9-3.7 7.9-9.6 8.3-15.7v-17.8c3.9.6 7.9 1 12 1 11.8 0 22.2-3.2 30-9.6 10.2-8.3 15.7-20.7 15.7-36.3-.2-13.2-6.9-25.3-18.8-34.2z" fill="#000000" data-original="#000000"></path></g></svg>
+            <svg class="linkedin-logo" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="" height="" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 0 0 2.882 0z" fill="#000000" data-original="#000000" class=""></path></g></svg>
+          </div>
+        </div>
+      </div>
+      <div>
+        <ul class="list">
+          
+          <div class="c-l">
+            <li class="list-item-footer">
+              
+              <p class="company">Company</p>
+            </li>
+            <li class="list-item-footer">
+              <a href="#" class="footer-links">About Us</a>
+            </li>
+            <li class="list-item-footer">
+              <a href="#" class="footer-links">Service</a>
+            </li>
+            <li class="list-item-footer">
+              <a href="#" class="footer-links">Case Studies</a>
+            </li>
+            <li class="list-item-footer">
+              <a href="#" class="footer-links">Blog</a>
+            </li>
+            <li class="list-item-footer">
+              <a href="#" class="footer-links">Contact</a>
+            </li>
+          </div>
+            
+        </ul>
+      </div>
+      <div>
+        
+        <ul class="list">
+          <li class="list-item-footer">
+
+            <p class="support">Support</p>
+          </li>
+          <li class="list-item-footer">
+            <a href="#" class="footer-links">Community</a>
+          </li>
+          <li class="list-item-footer">
+          <a href="#" class="footer-links">Resources</a>
+        </li>
+        <li class="list-item-footer">
+          <a href="#" class="footer-links">Faqs</a>
+        </li>
+        <li class="list-item-footer">
+          <a href="#" class="footer-links">Privacy Policy</a>
+        </li>
+        <li class="list-item-footer">
+          <a href="#" class="footer-links">Careers</a>
+        </li>
+        
+      </ul>
+    </div>
+      <div>
+        <p class="get-in-touch">Get In Touch</p>
+        <div class="footer-flex">
+          <svg class="footer-icons" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="" height="" x="0" y="0" viewBox="0 0 479.058 479.058" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path d="M434.146 59.882H44.912C20.146 59.882 0 80.028 0 104.794v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159L239.529 264.631 39.173 90.982a14.902 14.902 0 0 1 5.738-1.159zm0 299.411H44.912c-8.26 0-14.971-6.71-14.971-14.971V122.615l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z" fill="#477CFA" data-original="#000000"></path></g></svg>
+          <a href="#" class="inf-p">support@appie.com</a>
+        </div>
+        
+        <div class="footer-flex">
+          <svg class="footer-icons" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="" height="" x="0" y="0" viewBox="0 0 482.6 482.6" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g transform="matrix(-1,0,0,1,482.6006805896759,0)"><path d="M98.339 320.8c47.6 56.9 104.9 101.7 170.3 133.4 24.9 11.8 58.2 25.8 95.3 28.2 2.3.1 4.5.2 6.8.2 24.9 0 44.9-8.6 61.2-26.3.1-.1.3-.3.4-.5 5.8-7 12.4-13.3 19.3-20 4.7-4.5 9.5-9.2 14.1-14 21.3-22.2 21.3-50.4-.2-71.9l-60.1-60.1c-10.2-10.6-22.4-16.2-35.2-16.2-12.8 0-25.1 5.6-35.6 16.1l-35.8 35.8c-3.3-1.9-6.7-3.6-9.9-5.2-4-2-7.7-3.9-11-6-32.6-20.7-62.2-47.7-90.5-82.4-14.3-18.1-23.9-33.3-30.6-48.8 9.4-8.5 18.2-17.4 26.7-26.1 3-3.1 6.1-6.2 9.2-9.3 10.8-10.8 16.6-23.3 16.6-36s-5.7-25.2-16.6-36l-29.8-29.8c-3.5-3.5-6.8-6.9-10.2-10.4-6.6-6.8-13.5-13.8-20.3-20.1-10.3-10.1-22.4-15.4-35.2-15.4-12.7 0-24.9 5.3-35.6 15.5l-37.4 37.4c-13.6 13.6-21.3 30.1-22.9 49.2-1.9 23.9 2.5 49.3 13.9 80 17.5 47.5 43.9 91.6 83.1 138.7zm-72.6-216.6c1.2-13.3 6.3-24.4 15.9-34l37.2-37.2c5.8-5.6 12.2-8.5 18.4-8.5 6.1 0 12.3 2.9 18 8.7 6.7 6.2 13 12.7 19.8 19.6 3.4 3.5 6.9 7 10.4 10.6l29.8 29.8c6.2 6.2 9.4 12.5 9.4 18.7s-3.2 12.5-9.4 18.7c-3.1 3.1-6.2 6.3-9.3 9.4-9.3 9.4-18 18.3-27.6 26.8l-.5.5c-8.3 8.3-7 16.2-5 22.2.1.3.2.5.3.8 7.7 18.5 18.4 36.1 35.1 57.1 30 37 61.6 65.7 96.4 87.8 4.3 2.8 8.9 5 13.2 7.2 4 2 7.7 3.9 11 6 .4.2.7.4 1.1.6 3.3 1.7 6.5 2.5 9.7 2.5 8 0 13.2-5.1 14.9-6.8l37.4-37.4c5.8-5.8 12.1-8.9 18.3-8.9 7.6 0 13.8 4.7 17.7 8.9l60.3 60.2c12 12 11.9 25-.3 37.7-4.2 4.5-8.6 8.8-13.3 13.3-7 6.8-14.3 13.8-20.9 21.7-11.5 12.4-25.2 18.2-42.9 18.2-1.7 0-3.5-.1-5.2-.2-32.8-2.1-63.3-14.9-86.2-25.8-62.2-30.1-116.8-72.8-162.1-127-37.3-44.9-62.4-86.7-79-131.5-10.3-27.5-14.2-49.6-12.6-69.7z" fill="#477CFA" data-original="#000000" class=""></path></g></svg>
+          <a href="#" class="inf-p">+(642) 342 762 44</a>
+        </div>
+        
+        <div class="footer-flex">
+          <svg class="footer-icons" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 682.667 682.667" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><defs><clipPath id="a" clipPathUnits="userSpaceOnUse"><path d="M0 512h512V0H0Z" fill="#477cfa" data-original="#000000" class=""></path></clipPath></defs><g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 682.667)"><path d="M0 0c-60 90-165 212-165 317 0 90.981 74.019 165 165 165s165-74.019 165-165C165 212 60 90 0 0Z" style="stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10; stroke-dasharray: none; stroke-opacity: 1;" transform="translate(256 15)" fill="none" stroke="#477CFA" stroke-width="30px" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000"></path><path d="M0 0c-41.353 0-75 33.647-75 75s33.647 75 75 75 75-33.647 75-75S41.353 0 0 0Z" style="stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10; stroke-dasharray: none; stroke-opacity: 1;" transform="translate(256 257)" fill="none" stroke="#477CFA" stroke-width="30px" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000"></path></g></g></svg>
+          <a href=# class="inf-p"> 442 Belle Terre St Floor 7, San <br>Francisco, AV 4206</a>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="system-border"></div>
+      <div class="footer-system">
+        <a href="#" class="download-btn">
+        <div class="footer-ios-border">
+            <svg class="footer-ios-icon" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"  x="0" y="0" viewBox="0 0 22.773 22.773" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M15.769 0h.162c.13 1.606-.483 2.806-1.228 3.675-.731.863-1.732 1.7-3.351 1.573-.108-1.583.506-2.694 1.25-3.561C13.292.879 14.557.16 15.769 0zM20.67 16.716v.045c-.455 1.378-1.104 2.559-1.896 3.655-.723.995-1.609 2.334-3.191 2.334-1.367 0-2.275-.879-3.676-.903-1.482-.024-2.297.735-3.652.926h-.462c-.995-.144-1.798-.932-2.383-1.642-1.725-2.098-3.058-4.808-3.306-8.276v-1.019c.105-2.482 1.311-4.5 2.914-5.478.846-.52 2.009-.963 3.304-.765.555.086 1.122.276 1.619.464.471.181 1.06.502 1.618.485.378-.011.754-.208 1.135-.347 1.116-.403 2.21-.865 3.652-.648 1.733.262 2.963 1.032 3.723 2.22-1.466.933-2.625 2.339-2.427 4.74.176 2.181 1.444 3.457 3.028 4.209z" fill="#1C1233" data-original="#000000" class=""></path></g></svg>
+            <p class="footer-download">Download for iOS</p>
+          </div>
+        </a>
+        
+        <a href="#" class="download-btn">
+        <div class="footer-android-border">
+            <svg class="footer-android-icon" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="m18.168 15.838-2.866-2.818L4.781 23.395zM18.168 8.167 4.781.61l10.521 10.375zM22.363 13.427c.858-.67.858-2.18-.057-2.85l-2.808-1.598-3.133 3.024 3.133 3.024zM2.034 24l12.234-12.002L2.034.001V0C1.415.319 1 .9 1 1.655v20.69c0 .755.415 1.336 1.034 1.655z" fill="#0D1133" data-original="#000000" class=""></path></g></svg>
+            <p class="footer-download">Download for Android</p>
+          </div>
+        </a>
+        
+        <p class="copyright">Copyright &copy; 2021 Appie. All rights reserved.</p>
+      </div>
+
+      <div class="footer-arrow-div">
+
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="footer-arrow">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
+          </svg>
+          
+        </a>
+      </div>
+  </div>
+</footer>
+</html>
